@@ -1,4 +1,4 @@
-# LAYERS OF ENCRYPTION
+# LAYERS OF ENCRYPTION (name undecided)
 Basic chal for now, thinking of ways to make non-trivial. As of now I made a basic sa webpage where script deletes flag (so view source ya disable js), stored it in webarchive, replaced webpage with something like maemories and going back in time. then i took the link, js obfuscated the console log with the link, put it in a tag of json description. planned to use it as what you will see when logged as admin. log in admin by setting isAdmin of a login page to 1.<br>
 BTW, Daksh told to implement SQL injection challenge in tat and hide it in a row of the table.<br>
 ### (NOTE: Daksh suggested to avoid php related stuff as harder to implement, so avoiding that angle for now)
