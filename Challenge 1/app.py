@@ -27,14 +27,14 @@ def login():
         query = f"SELECT secret FROM login_details WHERE username = '{username}' AND password = '{password}';"
 
         result = cursor.execute(query)
-        user = result.fetchone()[0]
+        user = result.fetchone()
 
         conn.close()
 
         if user:
             session['logged_in'] = True
             session['username'] = username
-            session['secret']=user
+            session['secret']=user[0]
             return redirect(url_for('profile'))
             #return render_template('profile.html', username=username, secret=session['secret'])
         else:
