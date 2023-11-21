@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -36,7 +35,6 @@ def login():
             session['username'] = username
             session['secret']=user[0]
             return redirect(url_for('profile'))
-            #return render_template('profile.html', username=username, secret=session['secret'])
         else:
             error = 'Invalid login credentials. Please try again.'
             return render_template('login.html', error=error)
