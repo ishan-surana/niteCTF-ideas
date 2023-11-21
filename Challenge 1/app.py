@@ -74,6 +74,3 @@ def add_cache_control(response):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-#Current injection after filters=a' is not 'b'/*
-#Improved injection by editing query. New injection=' UNION SELECT MAX(CASE WHEN username is 'admin' THEN secret END) FROM login_details/*
