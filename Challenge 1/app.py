@@ -8,7 +8,7 @@ app.secret_key = 'your_secret_key'
 def login():
     if 'logged_in' in session and session['logged_in']:
         session.pop('logged_in', None)
-        return redirect(url_for('index'))
+        return redirect(url_for('login'))
     
     if request.method == 'POST':
         username = request.form['username']
@@ -47,14 +47,17 @@ def index():
     if 'logged_in' in session and session['logged_in']:
         session.pop('logged_in', None)
         return redirect(url_for('index'))
-    return render_template('login.html')
+    return render_template('landing.html')
 
 @app.route('/profile')
 def profile():
     if 'logged_in' in session and session['logged_in']:
         username = session['username']
         secret = session.get('secret')
-        return render_template('profile.html', username=username, secret=secret)
+        flag="0"
+        if 'secret' not in secret:
+            flag="1"
+        return render_template('profile.html', username=username, secret=secret, flag=flag)
     else:
         error = 'You are not logged in. Please log in first.'
         return render_template('login.html', error=error)
