@@ -13,5 +13,5 @@ Note:- Daksh suggested to scrap wayback, so currently my angle for timetravel wo
 Flag be something like nite{k33ping_up_w1th_+he_time5}<br><br>
 
 Therefore, TODO<br>
-+ modify landing page
++ ~modify landing page~ [done]
 + modify token to link to new repo which will have flag in some issue history and lots of commits to distract people.
