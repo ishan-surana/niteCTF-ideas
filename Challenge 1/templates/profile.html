@@ -29,9 +29,22 @@
 </head>
 <body>
     <h1 style="color: white;">Profile</h1><br><br>
-    <p style="color: mediumseagreen; font-family: monospace,monospace; font-size: large; word-wrap: break-word;">Welcome, {{username}}! You have successfully logged in. Your secret is:- <br> {{secret}}!</p><br>
+    <p style="color: mediumseagreen; font-family: monospace,monospace; font-size: large; word-wrap: break-word;margin:10px">Welcome, {{username}}! You have successfully logged in. Your secret is:- <br> {{secret}}!</p><br>
+    <p style="color: white;">Images stored:-<br></p>
+    <div id="user" style="display: flex;justify-content: center;">
+    <img style="margin-right:10px" src="https://avatars.githubusercontent.com/u/67434608?s=280&v=4"/><br>
+    </div><br>
     <form action="/logout" method="get">
         <button type="submit">Logout</button>
     </form>
 </body>
+<script>
+    const flagValue = "{{ flag }}";
+    if (flagValue === "1")
+    {
+        const flagimage = document.createElement('img');
+        flagimage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXG5489lww8JwVMQWyHkJvXsouBexpwfW7E4yCdjCg_nCcDWRy5F9fMDtAbDe9Yo2Hx7c&usqp=CAU';
+        document.getElementById('user').appendChild(flagimage);
+    }
+</script>
 </html>
