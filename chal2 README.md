@@ -4,5 +4,5 @@ SO currently, challenge basically is a rickroll video I downloaded. I have extra
 <br><br>
 
 ### UPDATE:-
-pcap and encoder/decoder scripts uploaded. fake flag is nite{4lmo5t_th3re_bu+_n0t_yet!} and can be changed. the covered.jpg is 69.jpg with steghide and password as the above fake flag. We can do some riddle about the image number as well.<br>
+pcap and encoder/decoder scripts uploaded. fake flag is ``nite{4lmo5t_th3re_bu+_n0t_yet!}`` and can be changed. the covered.jpg is 69.jpg with steghide and password as the above fake flag. We can do some riddle about the image number as well.<br>
 Also can look into audio lsb, but then again we are sending xored frames in a pcap instead of video so scrapping that idea.
