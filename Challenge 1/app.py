@@ -54,10 +54,10 @@ def profile():
     if 'logged_in' in session and session['logged_in']:
         username = session['username']
         secret = session.get('secret')
-        flag="0"
+        key="0"
         if 'secret' not in secret:
-            flag="1"
-        return render_template('profile.html', username=username, secret=secret, flag=flag)
+            key="1"
+        return render_template('profile.html', username=username, secret=secret, key=key)
     else:
         error = 'You are not logged in. Please log in first.'
         return render_template('login.html', error=error)
